@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+  --bg-color: rgb(250, 186, 186);
+  --border-color: rgb(198, 73, 73);
+}
+
+body {
+  display: grid;
+  grid-template: "sidebar  header" 120px
+                 "sidebar article" auto / clamp(200px, 25%, 300px) auto;
+  gap: 10px;
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: article;
+}
+
+.header,
+.sidebar,
+.main {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
