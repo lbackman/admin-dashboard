@@ -20,6 +20,45 @@ body {
 
 .header {
   grid-area: header;
+  display: grid;
+  padding: 10px;
+}
+
+.upper-header,
+.lower-header,
+.userlinks,
+.header-buttons {
+  display: grid;
+}
+
+.upper-header {
+  grid-template-columns: 5fr 1fr 1fr 1fr;
+  place-items: center;
+}
+
+input[type="search"] {
+  width: 90%;
+}
+
+.searchbar {
+  place-self: center start;
+  width: min(480px, 100%);
+}
+
+.lower-header {
+  grid-template-columns: 1fr 1fr;
+}
+
+.userlinks {
+  grid-template-columns: 1fr 3fr;
+  place-self: center start;
+  gap: 10px;
+}
+
+.header-buttons {
+  place-self: center end;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .sidebar {
