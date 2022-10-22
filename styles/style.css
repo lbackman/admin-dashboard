@@ -27,7 +27,8 @@ body {
 .upper-header,
 .lower-header,
 .userlinks,
-.header-buttons {
+.header-buttons,
+.sidebar-wrapper {
   display: grid;
 }
 
@@ -74,4 +75,22 @@ input[type="search"] {
 .main {
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
+}
+
+.sidebar-wrapper {
+  gap: 30px;
+  padding: 10px;
+}
+
+.dashboard-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard-item>div {
+  margin-right: 10px;
+}
+
+div>.dashboard-item:not(:last-child) {
+  margin-bottom: 16px;
 }
