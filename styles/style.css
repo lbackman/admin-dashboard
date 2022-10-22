@@ -37,8 +37,41 @@ body {
   place-items: center;
 }
 
+.looking-glass {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.looking-glass>svg {
+  height: 20px;
+}
+
 input[type="search"] {
   width: 90%;
+  height: 24px;
+  border-radius: 20px;
+  border: none;
+  padding: 5px;
+  font-size: 0.85rem;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 1px 1px 2px gray;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .searchbar {
