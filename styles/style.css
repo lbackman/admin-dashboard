@@ -284,10 +284,10 @@ div > .dashboard-item.top {
 }
 
 .project {
-  height: 180px;
+  height: 220px;
   /* width: 340px; */
   align-content: start;
-  grid-template-rows: 1fr 6fr 2fr;
+  grid-template-rows: 1fr 6fr 1fr 2fr;
 }
 
 .project .images {
@@ -295,6 +295,7 @@ div > .dashboard-item.top {
   display: flex;
   width: 120px;
   justify-content: space-between;
+  grid-row-end: -1;
 }
 
 .notifications svg,
