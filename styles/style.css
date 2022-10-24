@@ -39,6 +39,7 @@ a {
 .projects,
 .announcements,
 .trending,
+.container,
 .project {
   display: grid;
 }
@@ -261,6 +262,14 @@ div > .dashboard-item.top {
   margin-bottom: 40px;
 }
 
+.container {
+  gap: 20px;
+}
+
+.announcement a:visited {
+  color: inherit;
+}
+
 .projects h2 {
   grid-column: 1 / -1;
 }
@@ -287,7 +296,21 @@ div > .dashboard-item.top {
   background-color: aliceblue;
   border: none;
   border-radius: 5px;
-  /* padding: 5px; */
+  padding: 30px;
+}
+
+.aside .announcement {
+  /* padding: 10px; */
+  font-size: 0.8rem;
+}
+
+.aside .announcement:not(:last-child)::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 0.5px solid #898989;
+  margin-top: 20px;
 }
 
 .trend {
