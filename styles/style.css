@@ -116,6 +116,19 @@ form {
   border: 1px solid var(--border-color);
 }
 
+.side-logo svg {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-logo.big svg {
+  width: 32px;
+  height: 32px;
+}
+
 .sidebar-wrapper {
   gap: 30px;
   padding: 10px;
@@ -124,14 +137,28 @@ form {
 .dashboard-item {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-.dashboard-item>div {
+.dashboard-item p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.dashboard-item.top p {
+  font-size: 1.5rem;
+}
+
+.dashboard-item > div {
   margin-right: 10px;
 }
 
-div>.dashboard-item:not(:last-child) {
+div > .dashboard-item:not(:last-child) {
   margin-bottom: 16px;
+}
+
+div > .dashboard-item.top {
+  margin-bottom: 0;
 }
 
 .box-container {
@@ -174,6 +201,12 @@ div>.dashboard-item:not(:last-child) {
 
 .project .images {
   place-self: end;
+  display: flex;
+}
+
+.images img {
+  width: 24px;
+  height: 24px;
 }
 
 .container,
