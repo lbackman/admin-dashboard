@@ -8,6 +8,8 @@
 :root {
   --bg-color: rgb(250, 186, 186);
   --border-color: rgb(198, 73, 73);
+  --sidebar-color: #1992d4;
+  --sidebar-txt-clr: #fff;
 }
 
 body {
@@ -20,6 +22,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 .header {
@@ -181,6 +187,8 @@ a.notifications svg {
 
 .sidebar {
   grid-area: sidebar;
+  background-color: var(--sidebar-color);
+  color: var(--sidebar-txt-clr);
 }
 
 .main {
@@ -188,10 +196,17 @@ a.notifications svg {
 }
 
 .header,
-.sidebar,
 .main {
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
+}
+
+.side-logo {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .side-logo svg {
@@ -200,6 +215,7 @@ a.notifications svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: var(--sidebar-txt-clr);
 }
 
 .side-logo.big svg {
@@ -209,13 +225,23 @@ a.notifications svg {
 
 .sidebar-wrapper {
   gap: 30px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .dashboard-item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  height: 40px;
+}
+
+.dashboard-item:hover,
+.dashboard-item:focus,
+.dashboard-item:hover svg,
+.dashboard-item:focus svg {
+  background-color: white;
+  color: var(--sidebar-color);
+  fill: var(--sidebar-color);
 }
 
 .dashboard-item p {
@@ -229,14 +255,6 @@ a.notifications svg {
 
 .dashboard-item > div {
   margin-right: 10px;
-}
-
-div > .dashboard-item:not(:last-child) {
-  margin-bottom: 16px;
-}
-
-div > .dashboard-item.top {
-  margin-bottom: 0;
 }
 
 .box-container {
@@ -268,10 +286,6 @@ div > .dashboard-item.top {
 
 .container {
   gap: 20px;
-}
-
-.announcement a:visited {
-  color: inherit;
 }
 
 .project p,
@@ -345,10 +359,6 @@ div > .dashboard-item.top {
 .trend img:focus,
 .trend img:hover {
   transform: none;
-}
-
-.info a:visited {
-  color: inherit;
 }
 
 .app {
