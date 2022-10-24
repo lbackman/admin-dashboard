@@ -121,13 +121,17 @@ a.notifications svg {
 .large-avatar img {
   height: 60px;
   width: 60px;
-  border-radius: 50%;
 }
 
 .small-avatar img {
   height: 40px;
   width: 40px;
+}
+
+.small-avatar img,
+.large-avatar img {
   border-radius: 50%;
+  transition: transform 0.15s;
 }
 
 .small-avatar img:focus,
@@ -284,11 +288,20 @@ div > .dashboard-item.top {
 .project .images {
   place-self: end;
   display: flex;
+  width: 120px;
+  justify-content: space-between;
 }
 
+.notifications svg,
 .images img {
   width: 24px;
   height: 24px;
+  transition: transform 0.15s;
+}
+
+.notifications svg:hover,
+.images img:hover {
+  transform: scale(115%);
 }
 
 .container,
