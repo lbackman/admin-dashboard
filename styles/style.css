@@ -12,16 +12,21 @@
 
 body {
   display: grid;
-  grid-template: "sidebar  header" 120px
+  grid-template: "sidebar  header" 180px
                  "sidebar article" auto / clamp(200px, 25%, 300px) auto;
   gap: 10px;
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   grid-area: header;
   display: grid;
-  padding: 10px;
+  padding: 10px 30px;
+  gap: 10px;
 }
 
 .upper-header,
@@ -83,7 +88,7 @@ form {
 
 .searchbar {
   place-self: center start;
-  width: min(480px, 100%);
+  width: min(520px, 100%);
 }
 
 .top-right {
@@ -99,6 +104,19 @@ a.notifications svg {
   width: 24px;
 }
 
+.username > p,
+.greeting > p {
+  font-weight: bold;
+}
+
+.greeting > p:first-child {
+  font-size: 0.7rem;
+}
+
+.greeting > p:last-child {
+  font-size: 1.5rem;
+}
+
 .large-avatar img {
   height: 60px;
   width: 60px;
@@ -109,6 +127,14 @@ a.notifications svg {
   height: 40px;
   width: 40px;
   border-radius: 50%;
+}
+
+.small-avatar img:focus,
+.large-avatar img:focus,
+.small-avatar img:hover,
+.large-avatar img:hover {
+  filter: brightness(110%);
+  transform: scale(105%);
 }
 
 .lower-header {
@@ -126,6 +152,26 @@ a.notifications svg {
   place-self: center end;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+}
+
+.header-buttons > button {
+  background-color: dodgerblue;
+  color: rgb(246, 249, 252);
+  border-radius: 28px;
+  border: none;
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.header-buttons > button:hover {
+  background-color: blue;
+  box-shadow: 1px 1px 2px blue;
+}
+
+.header-buttons > button:active {
+  background-color: blueviolet;
+  box-shadow: inset 1px 1px 2px blueviolet;
 }
 
 .sidebar {
