@@ -317,11 +317,13 @@ a.notifications svg {
   width: 24px;
   height: 24px;
   transition: transform 0.15s;
+  opacity: 0.7;
 }
 
 .notifications svg:hover,
 .images img:hover {
   transform: scale(115%);
+  opacity: 1;
 }
 
 .container,
