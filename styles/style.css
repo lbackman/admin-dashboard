@@ -26,6 +26,7 @@ body {
 
 .upper-header,
 .lower-header,
+.top-right,
 .userlinks,
 .header-buttons,
 .sidebar-wrapper,
@@ -38,7 +39,7 @@ body {
 }
 
 .upper-header {
-  grid-template-columns: 5fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   place-items: center;
 }
 
@@ -85,6 +86,31 @@ form {
   width: min(480px, 100%);
 }
 
+.top-right {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-self: end;
+  gap: 20px;
+  place-items: center;
+}
+
+a.notifications svg {
+  height: 24px;
+  width: 24px;
+}
+
+.large-avatar img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.small-avatar img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
 .lower-header {
   grid-template-columns: 1fr 1fr;
 }
@@ -92,6 +118,7 @@ form {
 .userlinks {
   grid-template-columns: 1fr 3fr;
   place-self: center start;
+  place-items: center;
   gap: 10px;
 }
 
