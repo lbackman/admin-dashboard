@@ -6,17 +6,19 @@
 }
 
 :root {
-  --bg-color: rgb(250, 186, 186);
+  --bg-color: #e2e8f0;
+  --card-color: #fff;
   --border-color: rgb(198, 73, 73);
   --sidebar-color: #1992d4;
   --sidebar-txt-clr: #fff;
+  --shade-color: rgba(128, 128, 128, 0.627);
 }
 
 body {
   display: grid;
   grid-template: "sidebar  header" 180px
                  "sidebar article" auto / clamp(200px, 25%, 300px) auto;
-  gap: 10px;
+  /* gap: 10px; */
   min-height: 100vh;
 }
 
@@ -33,6 +35,9 @@ a:visited {
   display: grid;
   padding: 10px 30px;
   gap: 10px;
+  background-color: var(--card-color);
+  box-shadow: 4px 4px 5px var(--shade-color);
+  z-index: 1;
 }
 
 .upper-header,
@@ -80,11 +85,13 @@ input[type="search"] {
   padding: 5px;
   margin-right: 20px;
   font-size: 0.85rem;
+  background-color: var(--bg-color);
 }
 
 input:focus {
   outline: none;
-  box-shadow: 1px 1px 2px gray;
+  box-shadow: 2px 2px 5px var(--shade-color);
+  background-color: rgb(250, 250, 250);
 }
 
 form {
@@ -166,7 +173,7 @@ a.notifications svg {
 }
 
 .header-buttons > button {
-  background-color: dodgerblue;
+  background-color: var(--sidebar-color);
   color: rgb(246, 249, 252);
   border-radius: 28px;
   border: none;
@@ -195,10 +202,13 @@ a.notifications svg {
   grid-area: article;
 }
 
-.header,
+.header {
+  
+}
+
 .main {
   background-color: var(--bg-color);
-  border: 1px solid var(--border-color);
+  /* border: 1px solid var(--border-color); */
 }
 
 .side-logo {
@@ -328,10 +338,11 @@ a.notifications svg {
 
 .container,
 .project {
-  background-color: aliceblue;
+  background-color: var(--card-color);
   border: none;
   border-radius: 5px;
   padding: 30px;
+  box-shadow: 2px 2px 5px var(--shade-color);
 }
 
 .aside .announcement {
