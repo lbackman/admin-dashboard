@@ -202,10 +202,6 @@ a.notifications svg {
   grid-area: article;
 }
 
-.header {
-  
-}
-
 .main {
   background-color: var(--bg-color);
   /* border: 1px solid var(--border-color); */
@@ -269,7 +265,7 @@ a.notifications svg {
 
 .box-container {
   grid-template-columns: 3fr 1fr;
-  padding: 20px;
+  padding: 40px 20px;
   gap: 20px;
 }
 
@@ -307,13 +303,6 @@ a.notifications svg {
   grid-column: 1 / -1;
 }
 
-.project {
-  height: 220px;
-  /* width: 340px; */
-  align-content: start;
-  grid-template-rows: 1fr 6fr 1fr 2fr;
-}
-
 .project .images {
   place-self: end;
   display: flex;
@@ -340,9 +329,24 @@ a.notifications svg {
 .project {
   background-color: var(--card-color);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 30px;
   box-shadow: 2px 2px 5px var(--shade-color);
+}
+
+.project {
+  height: 220px;
+  /* width: 340px; */
+  align-content: start;
+  grid-template-rows: 1fr 6fr 1fr 2fr;
+  border-left: 10px solid #fdc500;
+  transition: transform 0.15s;
+}
+
+.project:hover {
+  filter: brightness(110%);
+  transform: translateY(-4px);
+  cursor: pointer;
 }
 
 .aside .announcement {
